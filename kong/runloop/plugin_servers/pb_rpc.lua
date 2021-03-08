@@ -46,6 +46,9 @@ do
     [".kong_plugin_protocol.KV"] = function(d)
       return {d.k, structpb_value(d.v)}
     end,
+    [".kong_plugin_protocol.ExitArgs"] = function (d)
+      return {d.status, d.body, d.headers}
+    end,
   }
 end
 
